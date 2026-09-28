@@ -1,0 +1,11 @@
+# Project-level Codex config. Merged on top of the user config; requires the project to be trusted.
+# The bootstrap script also registers this server with `codex mcp add` inside the reviewer sandbox,
+# which does not depend on project trust.
+
+[mcp_servers.slack]
+command = "docker"
+args = ["run", "-i", "--rm",
+        "-e", "SLACK_BOT_TOKEN",
+        "-e", "SLACK_TEAM_ID",
+        "-e", "SLACK_CHANNEL_IDS",
+        "mcp/slack"]

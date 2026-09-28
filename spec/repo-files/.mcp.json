@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "slack": {
+      "command": "docker",
+      "args": [
+        "run", "-i", "--rm",
+        "-e", "SLACK_BOT_TOKEN",
+        "-e", "SLACK_TEAM_ID",
+        "-e", "SLACK_CHANNEL_IDS",
+        "mcp/slack"
+      ]
+    }
+  }
+}
